@@ -1,0 +1,19 @@
+VButton	KEYWORD1
+VPedal	KEYWORD1
+
+set	KEYWORD2
+setTimeOut	KEYWORD2
+update	KEYWORD2
+push	KEYWORD2
+release	KEYWORD2
+pull	KEYWORD2
+get		KEYWORD2
+
+initVButton	KEYWORD2
+initVPedal	KEYWORD2
+
+subtractTimeVButtons	KEYWORD2
+subtractTimeVPedals	KEYWORD2
+
+NB_BUTTONS	LITERAL1
+NB_PEDALS	LITERAL1
