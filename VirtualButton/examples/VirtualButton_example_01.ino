@@ -16,10 +16,12 @@
  * 
  *
  */
- 
+
+// Also include the RuneWork2 library.
 #include <VirtualButton.h>
 #include <RuneWork2.h>
 
+// We'll use the builtin led. Instead of referring to the mystic 'pin number 13', we use a define.
 #define ledBuiltIn 13
 
 // A new virtual button object.
