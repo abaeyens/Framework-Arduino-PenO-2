@@ -1,3 +1,12 @@
+/* RuneWork2_example_02.ino - Example Arduino sketch for the RuneWork library
+ * The two songs are arrangements from the original works of John Williams and Europe.
+ * 
+ * Arne Baeyens - Contact: 2arne.baeyens@gmail.com
+ * 
+ * Sound functions are inspired by the DwengoSound libary for PIC microcontrollers.
+ * 
+ */
+
 #include <RuneWork2.h>
 
 // Two songs...
