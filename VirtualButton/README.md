@@ -23,3 +23,36 @@ Before that we are able to use the button we just created, we first have to regi
 initVButton(&SW_myButton);
 ```
 Note the use of the '&' in front of the name of the object. This is because we have to refer to the address of the object. We do not want to pass the whole object to the function.
+
+The timeout time is the time the state of the button stays high after the last press. This value can be changed. It's best to do this in the setup().
+
+```cpp
+SW_myButton.timeOut = 150;
+```
+
+The current state (a boolean) is saved in the public variable `state` of the virtual button object.
+```cpp
+a = SW_myButton.state  // Save the state of the button to the variable 'a'.
+```
+For example, we can do a while-loop that runs until the button isn't pressed anymore:
+```cpp
+while(SW_myButton.state == true){
+  // Function body...
+}
+```
+
+Of course a button can also be pressed.
+```cpp
+SW_myButton.push();
+```
+A button can also be released. A release forces the button to go low.
+```cpp
+SW_myButton.release();
+```
+
+A special function is the `get()`. It returns the state of button and marks the button as read. The button returns to it's normal, not-yet-read state when the timeout period after the last press has passed. If the `get()` function is used on a button that has already been read but still has the state high, it returns false.
+```cpp
+a = SW_myButton.get();  // Save the getted state of the button to the variable 'a'.
+```
+
+The virtual pedals work the same way. The only difference is that in addition to a low/high state they also have a position variable which increases and decreases. This position is saved in the public variable `position` of the the virtual pedal object.
