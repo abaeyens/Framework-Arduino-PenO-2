@@ -1,4 +1,4 @@
-/* Example_01 - Example Arduino skecth for the RuneMotor library
+/* Example_01.ino - Example Arduino skecth for the RuneMotor library
  * Copyright (C) 2017  Arne Baeyens
  * 
  * This program is free software: you can redistribute it and/or modify
