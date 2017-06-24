@@ -47,7 +47,7 @@
 // EOS is used to signal the End Of a Song.
 #define EOS 1
 
-// The pin for the soundoutput. This must be a pin that has PWM of Timer1.
+// The pin for the soundoutput. This must be a pin that has PWM of Timer2.
 #define soundPin 3
 
 #define TASKS_BUFFER_LENGTH 16
