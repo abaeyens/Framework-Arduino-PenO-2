@@ -22,6 +22,7 @@
 
 #include <RuneWork2.h>
 
+// We'll use the builtin led.
 #define ledBuiltIn 13
 
 
