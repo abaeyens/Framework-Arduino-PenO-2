@@ -1,0 +1,6 @@
+initMotors	KEYWORD2
+setSpeedMotor1	KEYWORD2
+setSpeedMotor2	KEYWORD2
+stopMotors	KEYWORD2
+getSpeedMotor1	KEYWORD2
+getSpeedMotor2	KEYWORD2
