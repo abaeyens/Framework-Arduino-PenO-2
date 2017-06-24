@@ -41,7 +41,7 @@ while(SW_myButton.state == true){
 }
 ```
 
-Of course a button can also be pressed.
+Of course you can push a button.
 ```cpp
 SW_myButton.push();
 ```
