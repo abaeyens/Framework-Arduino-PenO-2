@@ -10,3 +10,9 @@ Currently the framework consist of three libraries:
 The RuneWork library is fully independent of the other two. However, the VirtualButton is designed to be used together with RuneWork. All three combined they can be used as a backbone for your program, along with the Arduino standard library and your IR decoding library of choice.
 
 These three libraries were developed during a P&O-2 project from february to mai 2017. A small wheelchair-robot was designed during this course.
+
+# How to use
+1. Download the repository as a zip file to a (temporary) folder of choice
+2. Unpack the zip file.
+3. Copy the three folders, named `RuneWork2`, `RuneMotor` and `VirtualButton`, to the Arduino library folder. On Windows machines the path is `/Documents/Arduino/libraries`.
+4. (Re)start the Arduino IDE. Everything should work straight out of the box now. Don't forget to add the `#include` in your mainprogram however.
