@@ -15,6 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  *
+ * Arne Baeyens - Contact: 2arne.baeyens@gmail.com
+ *
+ * Virtual button and pedal objects to emulate the physical characteristics of these devices.
+ * Useful for converting the discrete signals of an infrared TV remote to a continuous value.
  */
 
 // Also include the RuneWork2 library.
