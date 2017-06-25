@@ -3,7 +3,7 @@
 A framework with libraries to be used for developing Arduino robots in P&O 2.
 
 Currently the framework consist of three libraries:
-- RuneWork2: A simple taskmanager and sound player. Can be used to call functions in the future. However, it currently does not support direct control of servos.
+- RuneWork2: A simple taskmanager and sound player. Can be used to call functions in the future. Currently it does not support controlling servos very well.
 - RuneMotor: A motorcontroller, specially suited for the electronics used in the P&O courses.
 - VirtualButton: A class to create virtual buttons and virtual pedals. They are of great use when using a remote control with non-proportional controls (e.g. a TV set remote). Virtual pedals allow to limit the acceleration of motors.
 
@@ -42,3 +42,6 @@ These three libraries were developed during a P&O-2 group project from february 
 - What timers do these libraries use?
 
    RuneMotor uses the standard Arduino PWM libraries and thus Timer0 is used, which by default is also used for the function delay(). The PWM frequency is not changed and is around 1 kHz. The RuneWork2 library uses Timer1 for the taskmanaging system and Timer2 for playing sounds. The VirtualButton library doesn't use any timers.  
+
+- How does the RuneWork2 taskmanager handle tasks that take a lot of time? Can I use delays in those tasks/functions?
+   The RuneWork2 taskmanager is not designed to handle tasks that take more time than the defined period (see RuneWork2 README). I strongly disadvise the use of delays inside RuneWork2 tasks, but if really want, you can.
