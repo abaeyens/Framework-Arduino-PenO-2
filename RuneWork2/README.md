@@ -17,35 +17,81 @@ initRuneWork();        // Initiate the RuneWork taskmanager.
 setRuneWorkPeriod(5);  // Use a period of 5 ms for the RuneWork taskmanager.
 initSound();           // Initiate the sound stuff (not necessary if you're not using the sound functions).
 ```
+You can change the RuneWorkPeriod while in the midst of your program if you need to.
 
+In the following examples we'll use an example function `myFunction()`.
 
+Say we want to call our example function a single time after 750 ms. We can do this very simply with:
+```cpp
+setTask(myFunction, 750);
+```
+
+In can be useful to call a function multiple times. We call this 'scheduling'.
+```cpp
+scheduleTask(myFunction, 750, 10);     // Call the function myFunction 10 times.
+scheduleTask(myFunction, 750, 0);      // Call the function myFunction until the next blue moon.
+```
+
+This can become very funny, but luckily we can also remove single tasks and scheduled tasks.
+```cpp
+removeTask(myFunction);          // Remove a single task.
+removeScheduleTask(myFunction);  // Remove a scheduled task.
+```
+
+The buffers containing the single tasks and the scheduled tasks are of fixed length. To change the length of these buffers, change the numbers in the `RuneWork2.h` file, they are named `TASKS_BUFFER_LENGTH` and `TASKS_SCHEDULE_LENGTH`. By default the respective lengths are 16 and 9. Due to the O(a\*b) complexity of the RuneWork2 taskmanager (a and b being the respective lengths of the buffers) it's best to keep the buffer lengths as short as possible. These two lengths can be obtained using the following two functions:
+```cpp
+getTasksBufferLength();
+getScheduleBufferLength();
+```
+
+There are also two functions to read the current usage of the buffers. They return the number of tasks that are currently in the buffer.
+```cpp
+nbTasks();
+nbScheduleTasks();
+```
 
 ### Sound
 The RuneWork2 sound functions do support the use of triplets. While musical pieces rarely contain more than a few triplets, they give parts of the piece a very characteristic rithm and thus are very important rithmical figures. That said, most simple sound libraries don't support triplets, but this one does. A famous use of triplets is in the main title of Star Wars. The used music notation and memory structures are inspired by those used in the Dwengo library.
 
 Let's start with the music notation. Here's an example:
 ```cpp
-const note Return [] = {{'C', 0, Q}, {'E', 0, Q}, {'G', 0, H}, {'Q', 0, 0}};
+const note Song_example [] = {{'C', 0, Q}, {'E', 0, Q}, {'G', 0, H}, {'Q', 0, 0}};
 ```
-The code above saves a short song of three notes to the variable `Return`. Please note that this variable is an array of note structures and that `const` is used to indicate that this is a unchangeable variable. The last note should always be `{'Q', 0, 0}`.
+The code above saves a short song of three notes to the variable `Song_example`. Please note that this variable is an array of note structures and that `const` is used to indicate that this is a unchangeable variable. The last note should always be `{'Q', 0, 0}`. The tempo the song will be played has to specified when starting a song.
 
-A single note structure consists of three variables: a character representing the set of pitches, an integer number to denote the octave and one or two letters to specify the length of that particular note. Let's analyse the example
-
-
+A single note structure consists of three variables: a character representing the set of pitches, an integer number to denote the octave and one or two letters to specify the length of that particular note. The letters are the standard music letters. For Europeans, an A is la, B is a si, C is a do, ... In the used notation lowercase letters are used for flat notes. For rests, a 'Q' is used.
 
 It's not possible to use sharp notes (for example, F♯). Instead the corresponding flat should be used, in the example this means using a G♭. Flat pitches are written in lowercase, so for this example this will give a g.
 
+For the length of the notes, all possible lengths are shown below:
 ```cpp
 // Defines for music note durations.
-#define H 24  // half 2/4
-#define Q 12  // quarter 1/4 
-#define E 6   // eighth 1/8
-#define S 3   // sixteenth 1/16
-#define W 48  // whole 4/4
+H    // half 2/4
+Q    // quarter 1/4 
+E    // eighth 1/8
+S    // sixteenth 1/16
+W    // whole 4/4
 // The T stands for triplets.
-#define HT 16  // half 2/4 in triplet
-#define QT 8   // quarter 1/4 in triplet
-#define ET 4   // eighth 1/8 in triplet
-#define ST 2   // sixteenth 1/16 in triplet
-#define WT 36  // whole 4/4 in triplet
+HT   // half 2/4 in triplet
+QT   // quarter 1/4 in triplet
+ET   // eighth 1/8 in triplet
+ST   // sixteenth 1/16 in triplet
+WT   // whole 4/4 in triplet
+```
+
+Let's now analyse the example `Song_example`. Without the last note - which isn't played and just indicates the end of the song - there are three notes. A C, an E and a G. All are played at octave 0, e.g. the 'normal' tone height. The first and second note have a duration of a quarter note (1/4) and the last note is an eighth note (1/8).
+
+Starting a song is easy. Let's start the example song and play it with a tempo of 120 beats per minute.
+```cpp
+startSong(Song_example, 120);
+```
+Please note that the code following the above comment is executed immediately afterwards. In short, you can do other things in your code while the song is playing.
+
+To see whether a song is being played or not the `getSongFlag()` function can be used. It returns a bool which is true if a song is playing, otherwise it return false.
+
+While playing songs is nice, sometimes it's only necessary to produce a single tone of a fixed frequency. The following example demonstrates the use of the `playFreq()` and `muteFreq()` functions.
+```cpp
+playFreq(1760, 512);    // Start playing a tone with a frequency of 1760 Hz.
+delay(1000);            // Wait a bit.
+muteFreq();             // Stop playing the tone.
 ```
