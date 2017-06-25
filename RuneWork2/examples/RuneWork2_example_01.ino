@@ -1,4 +1,4 @@
-/* VirtualButton.h - RuneWork2_example_01.ino - Example Arduino skecth for the RuneWork2 library.
+/* RuneWork2_example_01.ino - Example Arduino skecth for the RuneWork2 library.
  * Copyright (C) 2017  Arne Baeyens
  * 
  * This program is free software: you can redistribute it and/or modify
