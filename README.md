@@ -21,11 +21,11 @@ The RuneWork2 library is fully independent of the other two. However, the Virtua
 ### Usage
 There are some example Arduino sketches in the `example` folders in the three library folders. If something isn't yet completely clear, please post an issue or send me an e-mail.
 
-If you use this software in your project and you share or publish the code used in your project (like for example in the reports for P&0 2), please refer properly to this code as required by the GNU GPLv3 license.
-
 
 ## About
 These three libraries were developed during a P&O-2 group project from february to mai 2017. A small wheelchair-robot was designed during this course.
+
+If you use this software in your project and you share or publish the code used in your project (like for example in the reports for P&0 2), please refer properly to this code as required by the GNU GPLv3 license.
 
 
 ## FAQ
