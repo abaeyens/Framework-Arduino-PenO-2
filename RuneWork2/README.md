@@ -1,5 +1,7 @@
 # RuneWork2
-The workings of the RuneWork2 taskmanager are quite complex - it involves function pointers - so I suggest that you just learn to use it and post an issue here on GitHub if something doesn't work as expected. I've made two example Arduino sketches but most of the functionality of the RuneWork2 library is also described here.
+The workings of the RuneWork2 taskmanager are quite complex - it involves function pointers - so I suggest that you just (try to) use it and post an issue here on GitHub if something doesn't work as expected. I've made two example Arduino sketches but most of the functionality of the RuneWork2 library is also described here.
+
+The sound functions are inspired by the Dwengo sound library.
 
 ## Examples
 
