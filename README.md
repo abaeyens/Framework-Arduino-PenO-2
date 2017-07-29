@@ -23,7 +23,7 @@ There are some example Arduino sketches in the `example` folders in the three li
 
 
 ## About
-These three libraries were developed during a P&O 2 group project in the second semester of the year 2016-2017 in the course P&O 2 of the KULeuven. A small wheelchair-robot was designed during this course. This P&O 2 project was a group project of Team 413 and involved much more than just these libraries, like designing and building the wheelchair-robot, experiments, ... While I devloped these libaries, the project as a whole wouldn't have been possible at all without the fantastic efforts of all the team members of Team 413. The team members of Team 413 (of 2017) were E. Broeders, S. Coppens, K. Dermul, A. Deschrevel, J. Christiaens, W. De Schepper, S. Boon and A. Baeyens.
+These three libraries were developed during a P&O 2 group project in the second semester of the year 2016-2017 in the course P&O 2 of the KULeuven. **CWISPLE**, a small wheelchair-robot was designed and built during this course. This P&O 2 project was a group project of Team 413 and involved much more than just these libraries, like designing and building the wheelchair-robot, experiments, ... While I developed these libaries, the project as a whole wouldn't have been possible at all without the fantastic efforts of all the team members of Team 413. The team members of Team 413 (of 2017) were E. Broeders, S. Coppens, K. Dermul, A. Deschrevel, J. Christiaens, W. De Schepper, S. Boon and A. Baeyens.
 
 If you use this software in your project and you share or publish the code used in your project (like for example in the reports for P&0 2), please refer properly to this code as required by the GNU GPLv3 license. Please also reference to Team 413 (of 2017 - there's a team 413 every year) and it's members.
 
@@ -39,7 +39,7 @@ If you use this software in your project and you share or publish the code used 
 
 - Is the RuneWork2 library stable?
 
-   During the project it performed exactly as required, but please be careful in your programming. Unlike on a normal computer, there are no failsafes for e.g. buffer overflows on an Arduino. While it's unlikely your device will be physically damadged, it may crash and/or reboot due to small errors in the code. The README in the RuneWork2 folder exlains the usage of the RuneWork2 library.  
+   During the project it performed exactly as required, but please be careful in your programming. Unlike on a normal computer, there are no failsafes for e.g. buffer overflows on an Arduino. While it is unlikely that your device will be physically damadged, it may crash and/or reboot due to small errors in the code. The README in the RuneWork2 folder exlains the usage of the RuneWork2 library.  
 
 - What timers do these libraries use?
 
