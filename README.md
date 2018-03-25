@@ -3,7 +3,7 @@
 A framework with libraries to be used for developing Arduino robots in P&O 2.
 
 Currently the framework consist of three libraries:
-- RuneWork2: A simple taskmanager and sound player. Can be used to call functions in the future. Currently it does not support controlling servos very well.
+- RuneWork2: A simple taskmanager and sound player. Is based on cooperative multitasking. Can be used to call functions in the future. Currently it does not support controlling servos very well.
 - RuneMotor: A motorcontroller, specially suited for the electronics used in the P&O courses.
 - VirtualButton: A class to create virtual buttons and virtual pedals. They are of great use when using a remote control with non-proportional controls (e.g. a TV set remote). Virtual pedals allow to limit the acceleration of motors.
 
@@ -29,6 +29,11 @@ If you use this software in your project and you share or publish the code used 
 
 
 ## FAQ
+- What is cooperative multitasking?
+
+   Cooperative mulitasking differs from pre-emptive multasking, as is used in about all current advanced operating systems (Linux Cent OS, Windows 10, Mac OS X, Android, ...) in that the taskmanager does not end or interrupt a running process. The processess have to end and limit their runtime by theirselves . This makes cooperative multasking simpler to implement. The downside is that one process can hang the whole machine. So, code carefully. If you have 'difficult' code, try to put in the main loop. See [Wikipedia: Cooperative multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking) for a more thorough explication.
+   
+   
 - For which Arduino models can these libraries be used?
 
    These libraries are developed for use with the Arduino Uno Rev3, which uses the ATmega328p microcontroller. As these libraries depend on the Arduino library for most function the code should also work for other Arduino models, however some pins might have to be remapped and there might be some small issues with the timers as well. The VirtualButton library should work fine on any Arduino as it is just regular C++ code and doesn't use any particular library.  
