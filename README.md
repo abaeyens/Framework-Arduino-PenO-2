@@ -53,3 +53,8 @@ If you use this software in your project and you share or publish the code used 
 - How does the RuneWork2 taskmanager handle tasks that take a lot of time? Can I use delays in those tasks/functions?
 
    The RuneWork2 taskmanager is not designed to handle tasks that take more time than the defined period (see RuneWork2 README). I strongly disadvise the use of delays inside RuneWork2 tasks, but if you really want, you can.
+   
+   
+## Trivia
+
+- Cooperative multitasking was used in the Apollo Guidance Computer (about as powerful as an Arduino UNO, yet with more ROM).
