@@ -10,6 +10,9 @@ The sound functions are inspired by the Dwengo sound library.
 
 - RuneWork2_example_02.ino
    Basic usage of the sound functions (including two demo songs). The RuneWork2 header file contains some information about the used music format.  
+ 
+- RuneWork2_example_03.ino
+   Usage of a servo.
 
 ## Usage
 ### Taskmanager
@@ -99,7 +102,7 @@ muteFreq();             // Stop playing the tone.
 ```
 
 ### Servos
-The RuneWork2 library doesn't yet have native support for controlling servos, but luckily this does not mean using servos is not possible. Using the functionality provided by the taskscheduler, it is possible to control servos. Please see example 03.
+The RuneWork2 library doesn't yet have native support for controlling servos, but luckily this does not mean using servos is not possible. Using the functionality provided by the taskscheduler, it is possible to control servos. Please see example 03. Setting the position of the servo is done by writing to a global variable.
 
 
 ## FAQ
