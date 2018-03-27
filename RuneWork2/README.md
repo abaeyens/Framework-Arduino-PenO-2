@@ -97,3 +97,12 @@ playFreq(1760, 512);    // Start playing a tone with a frequency of 1760 Hz.
 delay(1000);            // Wait a bit.
 muteFreq();             // Stop playing the tone.
 ```
+
+### Servos
+The RuneWork2 library doesn't yet have native support for controlling servos, but luckily this does not mean using servos is not possible. Using the functionality provided by the taskscheduler, it is possible to control servos. Please see example 03.
+
+
+## FAQ
+- Servos don't work
+
+   Contact me, I'll see what I can do.
