@@ -3,7 +3,7 @@
 A framework with libraries to be used for developing Arduino robots in P&O 2.
 
 Currently the framework consist of three libraries:
-- RuneWork2: A simple taskmanager and sound player. Is based on cooperative multitasking. Can be used to call functions in the future. Currently it does not support controlling servos very well.
+- RuneWork2: A simple taskmanager and sound player. Is based on cooperative multitasking. Can be used to call functions in the future. Servo support is in alpha stage.
 - RuneMotor: A motorcontroller, specially suited for the electronics used in the P&O courses.
 - VirtualButton: A class to create virtual buttons and virtual pedals. They are of great use when using a remote control with non-proportional controls (e.g. a TV set remote). Virtual pedals allow to limit the acceleration of motors.
 
@@ -40,7 +40,7 @@ If you use this software in your project and you share or publish the code used 
 
 - Can I use servos together with the RuneWork2 library?
 
-   Short answer: no. Slightly longer answer: yes, but it's rather difficult. Most servo libraries use Timer1 for timing the pulses sent to the servo. However, this timer is also used by the RuneWork2 library.
+   UPDATE 27/03/2018: Servo control is now possible! See example 03 in the folder RuneWork2/examples. Note: Most servo libraries use Timer1 for timing the pulses sent to the servo. However, this timer is also used by the RuneWork2 library. For this reason, a workaround was made.
 
 - Is the RuneWork2 library stable?
 
