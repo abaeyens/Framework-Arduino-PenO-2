@@ -9,7 +9,7 @@ nbScheduleTasks	KEYWORD2
 getTasksBufferLength	KEYWORD2
 getScheduleBufferLength	KEYWORD2
 initRuneWork	KEYWORD2
-setRuneWorkPeriod KEYWORD2
+setRuneWorkPeriod	KEYWORD2
 initSound	KEYWORD2
 getSongFlag	KEYWORD2
 startSong	KEYWORD2
